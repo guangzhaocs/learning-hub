@@ -1,4 +1,5 @@
 #  Linear Regression
 
 
-$H_{\Theta} = \sum^{n}$
+<p>E = mc<sup>2</sup></p>
+<p>H<sub>2</sub>O</p>
