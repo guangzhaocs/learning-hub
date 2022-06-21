@@ -1,4 +1,4 @@
 #  Linear Regression
 
 
-$H_{\Theata}$
+$H_{\Theta} = \sum^{n}_{i=0}$
