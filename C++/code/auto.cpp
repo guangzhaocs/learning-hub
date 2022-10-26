@@ -46,6 +46,16 @@ int main()
         cout << reg.st_b_ind << ", " << reg.en_b_ind << endl;
     }
 
+
+    cout << "Using auto& to modify: " << endl;
+    for(auto &reg: reg_list){
+        reg.set_st_b_ind(7);
+    }
+
+    for(auto reg: reg_list){
+        cout << reg.st_b_ind << ", " << reg.en_b_ind << endl;
+    }
+
     cout << "Using for loop to modify: " << endl;
     for(int i=0;i<reg_list.size();i++){
         reg_list[i].set_st_b_ind(8);
