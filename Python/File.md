@@ -17,3 +17,9 @@ def wirte(file_name, row):
         writer = csv.writer(f)
         writer.writerow(row)     
 ```
+
+
+```
+ with open('visdial_1.0_train_all_entail.tsv', 'w', newline='') as f:
+                tsv_w = csv.writer(f, delimiter='\t')
+```
