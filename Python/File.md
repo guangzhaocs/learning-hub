@@ -9,6 +9,10 @@ import os
 if (os.path.exists(filepath)) :
 	#存在，则删除文件
 	os.remove(filepath)
+
+# 判断目录是否存在
+if not os.path.exists(dirs):
+    os.makedirs(dirs)
 ```
 
 ```
