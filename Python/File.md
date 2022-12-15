@@ -27,3 +27,13 @@ def wirte(file_name, row):
  with open('visdial_1.0_train_all_entail.tsv', 'w', newline='') as f:
                 tsv_w = csv.writer(f, delimiter='\t')
 ```
+
+```
+    from csv import reader
+    with open("debug_tmp_realdata/0.csv", 'r') as read_obj:
+        csv_reader = reader(read_obj)
+        for i, row in enumerate(csv_reader):
+            if i == 0:
+                signal_arr = np.array([float(i) for i in row])
+                break
+```
