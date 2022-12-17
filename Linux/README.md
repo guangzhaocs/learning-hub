@@ -2,5 +2,6 @@
 ```
 tar -zxvf test.tar.gz
 
-tar -zxvf /bbs.tar.zip -C /zzz/bbs    
+tar -zxvf /bbs.tar.zip -C /zzz/bbs   
+tar -zxvf HEK293T-Mettl3-KO-rep2.tar.gz -C HEK293T-Mettl3-KO-rep2
 ```
