@@ -22,4 +22,5 @@ Attention
 ```
 - 对random设定seed，但是对random.Random().sample()是不管用的，也就是说中间多了一层Random()后这个种子就传不到sample()中去了
 - 上述setup_seed函数要放到调用其他文件的import之前
+- torch.backends.cudnn.deterministic = True 会让训练变得非常慢
 ```
