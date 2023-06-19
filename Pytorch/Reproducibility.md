@@ -27,3 +27,5 @@ Attention
 - 上述setup_seed函数要放到调用其他文件的import之前
 - torch.backends.cudnn.deterministic = True 会让训练变得非常慢
 ```
+
+pytorch是基于CUDA API的，CUDA在不同设备上的伪随机数生成器不会是完全一样的，这是由设备决定的。
