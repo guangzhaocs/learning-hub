@@ -2,6 +2,9 @@
 For Python random, read [this file](https://github.com/guangzhaocs/learning-hub/blob/main/Python/Ramdom.md) first.
 
 
+torch.use_deterministic_algorithms(True)
+
+
 ### All seeds
 
 ```
