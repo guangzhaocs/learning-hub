@@ -2,11 +2,15 @@
 ### All seeds
 
 ```
-andom.seed(args.seed)
-os.environ['PYTHONHASHSEED'] =str(args.seed)
-np.random.seed(args.seed)
-torch.manual_seed(args.seed)
-torch.cuda.manual_seed(args.seed)
-torch.cuda.manual_seed_all(args.seed)
-torch.backends.cudnn.deterministic =True
+def setup_seed(seed):
+   torch.manual_seed(seed)
+   os.environ['PYTHONHASHSEED'] = str(seed)
+   torch.cuda.manual_seed(seed)
+   torch.cuda.manual_seed_all(seed)
+   np.random.seed(seed)
+   random.seed(seed)
+   torch.backends.cudnn.benchmark = False
+   torch.backends.cudnn.deterministic = True
+   torch.backends.cudnn.enabled = True
+setup_seed(20)
 ```
