@@ -1,0 +1,12 @@
+
+### All seeds
+
+```
+andom.seed(args.seed)
+os.environ['PYTHONHASHSEED'] =str(args.seed)
+np.random.seed(args.seed)
+torch.manual_seed(args.seed)
+torch.cuda.manual_seed(args.seed)
+torch.cuda.manual_seed_all(args.seed)
+torch.backends.cudnn.deterministic =True
+```
