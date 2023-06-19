@@ -19,6 +19,8 @@ def setup_seed(seed):
 setup_seed(20)
 ```
 
+torch.backends.cudnn.benchmark是python调用cudnn来加速卷积的一个机制。假如你设置这个为True的话。然后你的code出现一些地方使得这个机制被不停触发的话，可能就会导致结果不一样。
+
 Attention
 ```
 - 对random设定seed，但是对random.Random().sample()是不管用的，也就是说中间多了一层Random()后这个种子就传不到sample()中去了
