@@ -32,3 +32,11 @@ Attention
 ```
 
 pytorch是基于CUDA API的，CUDA在不同设备上的伪随机数生成器不会是完全一样的，这是由设备决定的。
+
+
+https://www.zhihu.com/question/345043149
+
+
+https://zhuanlan.zhihu.com/p/76472385
+
+
