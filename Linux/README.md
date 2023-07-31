@@ -5,3 +5,10 @@ tar -zxvf test.tar.gz
 tar -zxvf /bbs.tar.zip -C /zzz/bbs   
 tar -zxvf HEK293T-Mettl3-KO-rep2.tar.gz -C HEK293T-Mettl3-KO-rep2
 ```
+
+```
+You can install it for yourself with
+
+module load anaconda # If you're not using this version of anaconda-module, load your version here 
+pip install --user setproctitle
+```
