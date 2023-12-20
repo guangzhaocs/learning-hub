@@ -15,3 +15,9 @@ num2name_dict = df.set_index('Num')['Fruit'].to_dict()
 price2name_dict = df.set_index('Price')['Fruit'].to_dict()
 # {10: 'Apple', 9: 'Banana'}
 ```
+
+```
+for index, row in df.iterrows():
+    if row['flag'] == 3:
+        df.loc[index, 'model_stdv_un'] = 0.0
+```
