@@ -121,9 +121,14 @@ name is Process-1
 is_alive is False
 exitcode is 0
 ```
+multiprocessing supports two types of communication channel between processes: `Queues` and `Pipes`.
 
+## Queues
+
+## Pipes
 
 
 Reference:
+- https://docs.python.org/3/library/multiprocessing.html
 - https://blog.csdn.net/brucewong0516/article/details/85776194
 - https://blog.csdn.net/LCY133/article/details/107173364
