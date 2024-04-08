@@ -121,15 +121,15 @@ name is Process-1
 is_alive is False
 exitcode is 0
 ```
-multiprocessing supports two types of communication channel between processes: `Queues` and `Pipes`.
+multiprocessing supports two types of communication channel between processes: `Queue` and `Pipe`.
 
-## Queues
+## Queue
 ```
 class multiprocessing.Queue([maxsize])
 ```
 
 
-## Pipes
+## Pipe
 ```
 multiprocessing.Pipe([duplex])
 ```
