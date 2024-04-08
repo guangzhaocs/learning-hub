@@ -10,7 +10,8 @@ class multiprocessing.Process(group=None, target=None, name=None, args=(), kwarg
 
 ```
 from multiprocessing import Process
-import os
+import os,time
+
 
 def info(title):
     print(title)
@@ -18,25 +19,38 @@ def info(title):
     print('parent process:', os.getppid())
     print('process id:', os.getpid())
 
+
 def f(name):
+    print('hello first', name)
     info('function f')
-    print('hello', name)
+    time.sleep(5)
+    print('hello second', name)
+
 
 if __name__ == '__main__':
     info('main line')
     p = Process(target=f, args=('bob',))
+    print("daemon is", p.daemon)
     p.start()
     p.join()
+    print('name is', p.name)
+    print('is_alive is', p.is_alive())
+    print('exitcode is', p.exitcode)
 ```
 
 ```
 main line
 module name: __main__
 parent process: 34723
-process id: 80504
+process id: 87817
+daemon is False
+hello first bob
 function f
 module name: __main__
-parent process: 80504
-process id: 80505
-hello bob
+parent process: 87817
+process id: 87823
+hello second bob
+name is Process-1
+is_alive is False
+exitcode is 0
 ```
