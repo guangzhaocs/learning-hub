@@ -124,9 +124,15 @@ exitcode is 0
 multiprocessing supports two types of communication channel between processes: `Queues` and `Pipes`.
 
 ## Queues
+```
+class multiprocessing.Queue([maxsize])
+```
+
 
 ## Pipes
-
+```
+multiprocessing.Pipe([duplex])
+```
 
 Reference:
 - https://docs.python.org/3/library/multiprocessing.html
