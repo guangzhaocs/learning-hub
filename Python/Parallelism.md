@@ -55,7 +55,7 @@ name is Process-1
 is_alive is False
 exitcode is 0
 ```
-If timeout is a positive number:
+If timeout is a positive number e.g. `p.join(1)`:
 ```
 if __name__ == '__main__':
     info('main line')
@@ -84,4 +84,42 @@ is_alive is True
 exitcode is None
 hello second bob
 ```
+```
+if __name__ == '__main__':
+    info('main line')
+    p = Process(target=f, args=('bob',))
+    print("daemon is", p.daemon)
+    p.start()
+    p.join(1)
+    print('name is', p.name)
+    print('is_alive is', p.is_alive())
+    print('exitcode is', p.exitcode)
+    time.sleep(10)
+    print('-----------------\nafter 10s')
+    print('name is', p.name)
+    print('is_alive is', p.is_alive())
+    print('exitcode is', p.exitcode)
+```
+```
+main line
+module name: __main__
+parent process: 34723
+process id: 89567
+daemon is False
+hello first bob
+function f
+module name: __main__
+parent process: 89567
+process id: 89568
+name is Process-1
+is_alive is True
+exitcode is None
+hello second bob
+-----------------
+after 10s
+name is Process-1
+is_alive is False
+exitcode is 0
+```
+
 
