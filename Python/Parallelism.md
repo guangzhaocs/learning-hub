@@ -134,6 +134,11 @@ class multiprocessing.Queue([maxsize])
 multiprocessing.Pipe([duplex])
 ```
 
+## Pool
+```
+class multiprocessing.pool.Pool([processes[, initializer[, initargs[, maxtasksperchild[, context]]]]])
+```
+
 Reference:
 - https://docs.python.org/3/library/multiprocessing.html
 - https://blog.csdn.net/brucewong0516/article/details/85776194
