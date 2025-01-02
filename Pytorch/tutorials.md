@@ -1,4 +1,4 @@
-### Generate mask according the sequence length
+### Generate mask according to the sequence length
 ```
 seq_lengths = torch.Tensor([7,10,4])
 mask = torch.arange(seq_lengths.max().item())[None, :] < seq_lengths[:, None]
@@ -11,3 +11,7 @@ mask.float()
 ```
 ![image](https://github.com/user-attachments/assets/477b4aa2-49f1-491c-94cd-2f1165b9b187)
 
+
+### Reference
+- 1. https://blog.csdn.net/xiangduixuexi/article/details/108631890
+  
