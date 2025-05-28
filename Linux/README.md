@@ -21,3 +21,11 @@ You can install it for yourself with
 module load anaconda # If you're not using this version of anaconda-module, load your version here 
 pip install --user setproctitle
 ```
+
+```
+cat HEK293T-WT-rep3-eventalign.txt | grep "GGACT" > HEK293T-WT-rep3-GGACT.txt
+cat HEK293T-Mettl3-KO-rep3-eventalign.txt | grep "GGACT" > HEK293T-Mettl3-KO-rep3-GGACT.txt
+
+cat HEK293T-WT-rep3-GGACT.txt | awk -F "\t" '{if($10=="GGACT" ){print $7}}' > HEK293T-WT-rep3-GGACT-all-mean.txt
+cat HEK293T-Mettl3-KO-rep3-GGACT.txt | awk -F "\t" '{if($10=="GGACT" ){print $7}}' > HEK293T-Mettl3-KO-rep3-GGACT-all-mean.txt
+```
